@@ -5,11 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.retrofitapplication.R;
+
 import java.util.List;
 
 /*flexible and efficient version of ListView. larger data set of views that can be recycled
@@ -61,15 +64,21 @@ public class ShibeAdapter extends RecyclerView.Adapter<ShibeAdapter.ShibeViewHol
     }
 
     /*caches views associated with the default Preference layouts.*/
-    class ShibeViewHolder extends RecyclerView.ViewHolder {
+    class ShibeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView ivShibeImage;
 
         /*caches views associated with the default Preference layouts.*/
         /*Denotes that a parameter, field or method return value can never be null.*/
         ShibeViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             ivShibeImage = itemView.findViewById(R.id.iv_shibe_image);
             /*method that finds the view from the layout resource file that are attached with current Activity*/
+        }
+
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(context, "This is Test", Toast.LENGTH_SHORT).show();
         }
     }
 }
