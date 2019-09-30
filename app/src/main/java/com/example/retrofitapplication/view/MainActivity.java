@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         /* This is List Vertical */
         /*implementation which provides similar functionality to ListView.*/
-         /* LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this); */
+         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         /*Constructor used when layout manager is set in XML by RecyclerView attribute*/
-          /* rvShibes.setLayoutManager(linearLayoutManager); */
+          rvShibes.setLayoutManager(linearLayoutManager);
 
         /* This is Grid Horizontal */
         /*implementation which provides similar functionality to ListView.*/
