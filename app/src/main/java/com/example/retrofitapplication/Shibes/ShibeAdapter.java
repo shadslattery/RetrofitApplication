@@ -78,7 +78,9 @@ public class ShibeAdapter extends RecyclerView.Adapter<ShibeAdapter.ShibeViewHol
 
         @Override
         public void onClick(View view) {
-            Toast.makeText(context, "This is Test", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "This is Test " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }
